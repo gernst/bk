@@ -7,7 +7,15 @@ Author: Gidon Ernst <gidonernst@gmail.com>
 
 Feedback is welcome! I'd appreciate to hear whether anyone found this library useful.
 
-Usage:
+Installation
+------------
+
+    sbt compile
+    sbt package
+    sbt publishLocal # if you want to use it in other projects locally
+
+Usage
+-----
 
     import bk._
 

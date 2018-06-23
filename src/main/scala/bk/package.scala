@@ -10,10 +10,10 @@ package object bk {
   }
 
   def backtrack() = {
-    throw Backtrack
+    throw Backtrack()
   }
 
-  case object Backtrack extends Throwable with NoStackTrace {
+  case class Backtrack() extends Throwable /* with NoStackTrace */ {
     override def toString = "backtrack"
   }
 
@@ -22,7 +22,7 @@ package object bk {
       try {
         first
       } catch {
-        case Backtrack =>
+        case Backtrack() =>
           second
       }
     }
